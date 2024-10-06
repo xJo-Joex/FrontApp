@@ -1,0 +1,14 @@
+<div class="signup-card">
+    <div class="card-title">
+        <h1>Crear cuenta</h1>
+    </div>
+    <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <input type="text" name="username" placeholder="Username" formControlName="username">
+        <input type="email" name="email" placeholder="Correo electrónico" formControlName="email" autocomplete="email" >
+        <input type="password" name="password" placeholder="Contraseña" formControlName="password" autocomplete="new-password" >
+        <input type="submit" value="Registrarse">
+        <span>¿Ya tienes una cuenta? <a routerLink="/login">Iniciar sesión</a></span>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+</div>
