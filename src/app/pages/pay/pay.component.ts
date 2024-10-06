@@ -131,20 +131,12 @@ export class PayComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log("En el ngOnInit")
-    
-    iniciarDatos(this.data);
-    
-    console.log(this.data)
+    iniciarDatos(this.data);    
   }
 
   ngOnDestroy() {
     delete this.data.onAuthorize
-    console.log("En el destroy");
     reload(this.data);
-    console.log("Despues del reload");
-    console.log(this.data);
-    console.log('PayComponent destruido');
   }
 
 
